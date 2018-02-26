@@ -12,6 +12,8 @@
 		2B47DDFF1E2C0EF100CA3ED1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B47DDFD1E2C0EF100CA3ED1 /* Main.storyboard */; };
 		2B47DE011E2C0EF100CA3ED1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B47DE001E2C0EF100CA3ED1 /* Assets.xcassets */; };
 		2B47DE041E2C0EF100CA3ED1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B47DE021E2C0EF100CA3ED1 /* LaunchScreen.storyboard */; };
+		2B47DE0E1E2C132300CA3ED1 /* HomeKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2B47DE0D1E2C132300CA3ED1 /* HomeKit.framework */; };
+		6680155B27F4CEFC1EC0EA3E /* Pods_Bernard.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D9CD98F148064B3C0241A639 /* Pods_Bernard.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,11 @@
 		2B47DE001E2C0EF100CA3ED1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B47DE031E2C0EF100CA3ED1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2B47DE051E2C0EF100CA3ED1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2B47DE0B1E2C132200CA3ED1 /* Bernard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Bernard.entitlements; sourceTree = "<group>"; };
+		2B47DE0D1E2C132300CA3ED1 /* HomeKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HomeKit.framework; path = System/Library/Frameworks/HomeKit.framework; sourceTree = SDKROOT; };
+		67DC9C4B84F5DB57BBA06F09 /* Pods-Bernard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bernard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Bernard/Pods-Bernard.debug.xcconfig"; sourceTree = "<group>"; };
+		CCF535FF02577CB39A464E5B /* Pods-Bernard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Bernard.release.xcconfig"; path = "Pods/Target Support Files/Pods-Bernard/Pods-Bernard.release.xcconfig"; sourceTree = "<group>"; };
+		D9CD98F148064B3C0241A639 /* Pods_Bernard.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Bernard.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +36,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B47DE0E1E2C132300CA3ED1 /* HomeKit.framework in Frameworks */,
+				6680155B27F4CEFC1EC0EA3E /* Pods_Bernard.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1DFADEBACB9788B1C1B9947F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				67DC9C4B84F5DB57BBA06F09 /* Pods-Bernard.debug.xcconfig */,
+				CCF535FF02577CB39A464E5B /* Pods-Bernard.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		2B47DDED1E2C0EF100CA3ED1 = {
 			isa = PBXGroup;
 			children = (
 				2B47DDF81E2C0EF100CA3ED1 /* Bernard */,
 				2B47DDF71E2C0EF100CA3ED1 /* Products */,
+				2B47DE0C1E2C132300CA3ED1 /* Frameworks */,
+				1DFADEBACB9788B1C1B9947F /* Pods */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +74,7 @@
 		2B47DDF81E2C0EF100CA3ED1 /* Bernard */ = {
 			isa = PBXGroup;
 			children = (
+				2B47DE0B1E2C132200CA3ED1 /* Bernard.entitlements */,
 				2B47DDF91E2C0EF100CA3ED1 /* AppDelegate.swift */,
 				2B47DDFB1E2C0EF100CA3ED1 /* ViewController.swift */,
 				2B47DDFD1E2C0EF100CA3ED1 /* Main.storyboard */,
@@ -64,6 +85,15 @@
 			path = Bernard;
 			sourceTree = "<group>";
 		};
+		2B47DE0C1E2C132300CA3ED1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2B47DE0D1E2C132300CA3ED1 /* HomeKit.framework */,
+				D9CD98F148064B3C0241A639 /* Pods_Bernard.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +101,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2B47DE081E2C0EF100CA3ED1 /* Build configuration list for PBXNativeTarget "Bernard" */;
 			buildPhases = (
+				6A1C1ECC0D772A7BB60F67C4 /* [CP] Check Pods Manifest.lock */,
 				2B47DDF21E2C0EF100CA3ED1 /* Sources */,
 				2B47DDF31E2C0EF100CA3ED1 /* Frameworks */,
 				2B47DDF41E2C0EF100CA3ED1 /* Resources */,
+				9F389EF1E7C771239495E44B /* [CP] Embed Pods Frameworks */,
+				23C77BBD760824F39FB943A2 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -97,7 +130,13 @@
 					2B47DDF51E2C0EF100CA3ED1 = {
 						CreatedOnToolsVersion = 8.2.1;
 						DevelopmentTeam = RTKTPQSZLM;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.HomeKit = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -131,6 +170,64 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		23C77BBD760824F39FB943A2 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bernard/Pods-Bernard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6A1C1ECC0D772A7BB60F67C4 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Bernard-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9F389EF1E7C771239495E44B /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Bernard/Pods-Bernard-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/CocoaAsyncSocket/CocoaAsyncSocket.framework",
+				"${BUILT_PRODUCTS_DIR}/CocoaMQTT/CocoaMQTT.framework",
+				"${BUILT_PRODUCTS_DIR}/MSWeakTimer/MSWeakTimer.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaAsyncSocket.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CocoaMQTT.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/MSWeakTimer.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Bernard/Pods-Bernard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2B47DDF21E2C0EF100CA3ED1 /* Sources */ = {
@@ -259,25 +356,36 @@
 		};
 		2B47DE091E2C0EF100CA3ED1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 67DC9C4B84F5DB57BBA06F09 /* Pods-Bernard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Bernard/Bernard.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = RTKTPQSZLM;
 				INFOPLIST_FILE = Bernard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.metamorphium.Bernard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.metamorphium.bernard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
 		2B47DE0A1E2C0EF100CA3ED1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCF535FF02577CB39A464E5B /* Pods-Bernard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = Bernard/Bernard.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Distribution";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = RTKTPQSZLM;
 				INFOPLIST_FILE = Bernard/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.metamorphium.Bernard;
+				PRODUCT_BUNDLE_IDENTIFIER = com.metamorphium.bernard;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
 			};
@@ -302,6 +410,7 @@
 				2B47DE0A1E2C0EF100CA3ED1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
